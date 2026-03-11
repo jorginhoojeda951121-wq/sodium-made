@@ -35,6 +35,23 @@ Legacy DWSIM and FreeCAD integration files have been removed; everything now run
   - Anode view: `OH⁻ → O₂ + e⁻` style oxidation animation.
   - Electrolyte view: Na⁺ / OH⁻ ion motion between electrodes.
 
+### Screenshots & Illustrations
+
+Electrolysis furnace concept art:
+
+![Molten NaOH furnace views](sodium-frontend/public/electrolysis-views.png)
+![Lab-scale molten NaOH furnace dimensions](sodium-frontend/public/electrolysis-dimensions.png)
+
+In‑app simulation views:
+
+![Control room and gas purifier](sodium-frontend/public/simulation-overview-1.png)
+![Plant layout – Na container and caustic feed](sodium-frontend/public/simulation-overview-2.png)
+![Plant layout – Na transfer tank and NaOH feed](sodium-frontend/public/simulation-overview-3.png)
+
+Failure mode visual:
+
+![Catastrophic explosion concept](sodium-frontend/public/destroyed-factory.png)
+
 ### Install Python dependencies
 
 From the project root (`F:\sodium`):
