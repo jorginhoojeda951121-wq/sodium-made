@@ -545,36 +545,72 @@ function App() {
             <p className="intro-section-label">Purpose</p>
             <ul>
               <li>
-                Explore how an industrial sodium electrolysis cell responds to different voltage,
-                power, and NaOH feed settings.
+                Use this simulator to run sodium electrolysis experiments with adjustable voltage,
+                optional power targeting, and configurable NaOH batch conditions.
               </li>
-              <li>Visualize gas production, electrode wear, and dangerous failure modes.</li>
+              <li>
+                Observe sodium and hydrogen production, electrical behavior, electrode aging, and
+                safety-limit failure scenarios.
+              </li>
             </ul>
-            <p className="intro-section-label">Constraints & model limits</p>
+            <p className="intro-section-label">How to run an experiment</p>
             <ul>
               <li>
-                The model is simplified and tuned for teaching – it does <strong>not</strong> match a
-                specific real plant design.
+                Step 1: Set <strong>Voltage (V)</strong>, <strong>NaOH feed (kg)</strong>, and{' '}
+                <strong>NaOH purity (%)</strong> in the left control panel.
               </li>
               <li>
-                Current is limited to about 50 kA; electrode life, NaOH capacity (500 kg), and gas
-                output are approximate.
+                Step 2: Click <strong>Start experiment</strong> (top toolbar) or{' '}
+                <strong>Start with this NaOH batch</strong> to begin.
               </li>
-              <li>Graphs show recent history only (most recent 400 samples) for clarity.</li>
+              <li>
+                Step 3: Use <strong>Pause/Resume</strong> to hold or continue, and{' '}
+                <strong>End experiment</strong> to finalize and open report preview.
+              </li>
+              <li>
+                Optional controls: <strong>Step</strong> and <strong>+10 Steps</strong> advance the
+                backend model in discrete jumps for manual study.
+              </li>
             </ul>
-            <p className="intro-section-label">Cautions</p>
+            <p className="intro-section-label">How to change voltage and power</p>
             <ul>
               <li>
-                This simulation is for educational use only and must <strong>not</strong> be used for
-                engineering decisions or safety planning.
+                <strong>Voltage mode:</strong> Set <strong>Power target</strong> to 0 (or leave blank)
+                and adjust <strong>Voltage (V)</strong>. Current then follows model resistance.
               </li>
               <li>
-                Failure events (warnings, countdown, explosions, and destroyed‑factory view) are
-                illustrative, not real safety guidance.
+                <strong>Power mode:</strong> Enter a positive <strong>Power target (kW)</strong>. The
+                simulator regulates current from power and live resistance.
               </li>
               <li>
-                By continuing you acknowledge that this is a visualization tool only and carries no
-                warranty.
+                You can change voltage and power while running; each change is recorded and included
+                in the generated experiment report timeline.
+              </li>
+            </ul>
+            <p className="intro-section-label">How to download reports</p>
+            <ul>
+              <li>
+                After ending a run, an <strong>Experiment report preview</strong> modal appears.
+              </li>
+              <li>
+                Click <strong>Download PDF report</strong> in that modal, or use{' '}
+                <strong>Download report (PDF)</strong> in the top toolbar anytime after an experiment
+                is created.
+              </li>
+              <li>
+                The PDF includes setup conditions, operating timeline, production/electrical trends,
+                and failure analysis when applicable.
+              </li>
+            </ul>
+            <p className="intro-section-label">Constraints and cautions</p>
+            <ul>
+              <li>
+                This is a simplified educational model and does <strong>not</strong> represent a
+                full industrial design basis.
+              </li>
+              <li>
+                Current and safety behavior are approximate; failure visuals are illustrative only
+                and not real safety guidance.
               </li>
             </ul>
             <button
@@ -583,7 +619,7 @@ function App() {
                 setShowIntroModal(false);
               }}
             >
-              I understand – start experiment
+              I understand - continue to simulator
             </button>
           </div>
         </div>
